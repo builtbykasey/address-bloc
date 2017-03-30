@@ -90,9 +90,10 @@ class MenuController
    def number_search
      print "Enter your selection: "
      selection = gets.chomp.to_i
+     i = selection -1
 
-     if selection < address_book.entries.count
-        puts address_book.entries[selection]
+     if i < address_book.entries.count
+        puts address_book.entries[i]
         puts "Press enter to return to main menu"
         gets.chomp
         system "clear"
